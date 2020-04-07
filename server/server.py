@@ -128,7 +128,7 @@ def handle_conditional_response(conn, request_line, modified_since):
 
     else:
         message = response_message(
-            status_code=200, status_phrase='Modified', file_name=file_name, content_size=len(payload), payload=payload)
+            status_code=200, status_phrase='OK', file_name=file_name, content_size=len(payload), payload=payload)
 
     conn.send(message.encode())
 
